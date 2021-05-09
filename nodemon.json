@@ -1,6 +1,6 @@
 {
-    "watch": ["linkedList"],
+    "watch": ["src"],
     "ext": "ts,json",
     "ignore": ["src/**/*.spec.ts"],
-    "exec": "ts-node ./linkedList/linkedList.ts"
+    "exec": "ts-node ./src/index.ts"
   }
