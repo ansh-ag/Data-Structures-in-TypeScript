@@ -11,7 +11,7 @@ class LinkedListNode {
 }
 
 
-class LinkedList<T> {
+export class LinkedList<T> {
     head:LinkedListNode = null;
     tail:any = null;
     constructor(){}
@@ -39,7 +39,11 @@ class LinkedList<T> {
             console.log(this)
             return this;
         }
+
+        
         // Attach new node to the end of linked list.
+        
+        
         this.tail.next = listNode;
         this.tail = listNode;
         console.log(this)
@@ -49,15 +53,15 @@ class LinkedList<T> {
 
 
 
-const a = new LinkedList();
-a.append("B");
-a.append("C");
-a.prepend("A");
+// const a = new LinkedList();
+// a.append("B");
+// a.append("C");
+// a.prepend("A");
 
 
 
 
 
-console.log(JSON.stringify(a.head))
+// console.log(JSON.stringify(a.head))
 
 
