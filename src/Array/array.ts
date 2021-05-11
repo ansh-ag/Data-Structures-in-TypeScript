@@ -1,8 +1,8 @@
-export class ArrayList {
-    private items:number[]
+export class ArrayList<T> {
+    private items:T[]
     private count = 0
     constructor(length: number){
-    this.items = new Array(length)
+        this.items = new Array(length)
     }
 
 
@@ -13,7 +13,7 @@ export class ArrayList {
         }
     }
 
-    public insert(item : number): void{
+    public push(item : T): void{
         
         // double the length of array
         if(this.items.length == this.count){
@@ -26,17 +26,30 @@ export class ArrayList {
         }
 
         this.items[this.count++] = item;
-        console.log(this.items)
     }
 
-    public removeAt(index:number) :void {
+    public indexOf(item:T): number {
+        for(let i = 0; i<this.count;i++){
+            if(this.items[i] == item)
+                return i;
+        }
+        return -1;
+    }
+
+    public pop():T[] {
+        if(this.count == 0)
+            throw 'no items in array found to pop'
+        this.items[--this.count] =null
+        return this.items;    
+    }
+
+    public remove(index:number) :void {
         // validate index
         if(index < 0 || index >= this.count){
             throw "bad index"
         }
 
         // shift items, fill the hole
-
         for(let i =index; i<this.count;i++){
             this.items[i] = this.items[i+1];
         }

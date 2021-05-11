@@ -28,14 +28,13 @@ const linkedList = new LinkedList()
 
 import {ArrayList} from './Array/array';
 
-const arrayList = new ArrayList(10);
-arrayList.insert(3)
-arrayList.insert(4)
-arrayList.insert(5)
-
-arrayList.removeAt(2)
-
-arrayList.insert(8)
-// arrayList.print()
+const arrayList = new ArrayList<string>(10);
+arrayList.push("asd")
+arrayList.push("dsa")
+// arrayList.insert(5)
+arrayList.pop()
+arrayList.pop()
+// arrayList.insert(8)
+arrayList.print()
 
 
